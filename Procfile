@@ -1,1 +1,1 @@
-web: gunicorn codingMansion.wsgi --log-file
+web: gunicorn codingMansion.wsgi --log-file -
