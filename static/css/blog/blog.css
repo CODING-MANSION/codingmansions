@@ -1,0 +1,27 @@
+.intro a {
+    color: rgb(190, 75, 224)
+}
+
+.entry-content  ul, a ,h2, h3, li {
+    color:black;
+}
+
+.content {
+    text-align:center;
+    justify-content: center;
+    margin:auto;
+    width: 70%;
+    background-color: aliceblue;
+}
+
+.entry-content {
+    margin:auto;
+    width: 90%;  
+    text-align: justify;
+}
+
+.entry-content img {
+    width: 70%;
+    height: auto;
+  }
+

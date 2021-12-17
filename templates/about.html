@@ -1,0 +1,73 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block head %} 
+<link href="{% static 'css/portfolio.css' %}" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block title %}
+ABOUT US
+{% endblock %}
+
+
+{% block css %}
+    #about {
+        margin-top:20px;
+    }
+    .fa {  
+        padding: 20px;  
+        text-align: center;
+        margin: 50px 30px;  
+        font-size: 30px;  
+        width: 50px;
+        justify-content:center;
+        border-radius:50%;
+      } 
+      .fa-linkedin {  
+        background: #007bb5;  
+        color: white;  
+      }  
+      .fa-instagram {  
+        background: #125688;  
+        color: white;  
+      }  
+    .fa-youtube {  
+    background: #bb0000;  
+    color: white;  
+    } 
+    .fa-facebook {  
+        background: #3B5998;  
+        color: white;  
+      }  
+    .fa-snapchat-ghost {  
+        background: #fffc00;  
+        color: white;  
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
+      }  
+
+      a+a {
+          margin-left:100px;
+      }
+{% endblock %}
+{% block body %}
+
+ <!-- About-->
+ <section class="page-section bg-dark" id="about">
+    <img style="float: left;margin-left: 150px; margin-top: 100px; border-radius: 8em;" src="{% static 'assets\techbg.png' %}" width="250px" height="250px">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+
+            <div class="col-lg-8 text-center">
+                <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; top: 0; left: 5%;" class="text-white mt-0">CODING MANSION</h2>
+                <hr class="divider divider-light" />
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: justify;" class="text-white-75 mb-4">CODING MANSION is a technology channel that covers programming tutorials , interview cracking questions and programming skills to crack a best software company's interviews like Amazon, Microsoft etc.</p>
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: justify;" class="text-white-75 mb-4">As for programming video , you'll find "C"  and "PYTHON" video tutorials.</p>
+                <p  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: justify;" class="text-white-75 mb-4">CODING MANSION is an all- inclusive YouTube channel that's perfect for coders who are open to learning skills.</p>
+               <a class="btn btn-light btn-xl" href="https://www.youtube.com/channel/UCKaeXCzdET582MAki8A7bOg?">For more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

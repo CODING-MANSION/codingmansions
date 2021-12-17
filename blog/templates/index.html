@@ -1,0 +1,39 @@
+
+{% extends 'basic.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog/blogindex.css' %}">
+{% endblock %}
+<!-- <img width="371" height="274" src="https://www.spinxdigital.com/blog/wp-content/uploads/2020/06/15_best_programming_languages_resized.png" data-src="https://www.spinxdigital.com/blog/wp-content/uploads/2020/06/15_best_programming_languages_resized.png" class="attachment-twentyfourteen-full-width size-twentyfourteen-full-width wp-post-image lazy loaded" alt="15_best_programming_languages_resized" loading="lazy" data-srcset="https://www.spinxdigital.com/blog/wp-content/uploads/2020/06/15_best_programming_languages_resized.png 371w, https://www.spinxdigital.com/blog/wp-content/uploads/2020/06/15_best_programming_languages_resized-300x222.png 300w" data-sizes="(max-width: 371px) 100vw, 371px" sizes="(max-width: 371px) 100vw, 371px" srcset="https://www.spinxdigital.com/blog/wp-content/uploads/2020/06/15_best_programming_languages_resized.png 371w, https://www.spinxdigital.com/blog/wp-content/uploads/2020/06/15_best_programming_languages_resized-300x222.png 300w" data-was-processed="true"> -->
+
+
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+<div class="blog">
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <!-- BLOG 1 ===================================-->
+        <div class="row py-5">
+          <div class="col-lg-4">
+            <a href="blog">
+                <figure class="rounded p-3 bg-white shadow-sm">
+                    <img src="{% static 'assets\blog\blog1.png' %}" alt="" class="w-100 card-img-top">
+                    <figcaption class="p-4 card-img-bottom">
+                      <h2 class="h2 font-weight-bold mb-2 font-italic">15 Best Programming Languages for Mobile App Development 2021</h2><br/>
+                        <p class= "mb-0 text-larger text-muted font-italic">
+                            Top mobile app development languages JavaScript Kotlin C++ C# Python PHP Swift Objective-C JAVA HTML 5 Ruby Rust Lua Action Script SQL  
+                        </p>
+                    </figcaption>
+                </figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

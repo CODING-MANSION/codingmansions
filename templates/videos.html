@@ -1,0 +1,34 @@
+{% extends 'basic.html' %}
+{% load embed_video_tags %}
+
+{% block css %}
+    .video {
+        margin-left:100px;
+        margin-top:70px;
+        height: 550px;/*..very important if you want scroll bar...*/
+        overflow: auto; /*..will introduce scroll bar when needed..*/
+        padding: 20px;
+        padding-bottom: 30px
+        width:1280px;
+
+    }
+    #back {
+            margin-left:20px;
+            margin-top:30px;
+            font-family:font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+            }
+
+{% endblock %}
+
+{% block body %}
+    <a href="index" class="btn btn-success btn-xl" id="back">Back</a>
+    {% for video in allvideo %}
+
+            <div class="video" >
+                {% video video '1280x500' %}
+            </div>
+
+    {% endfor %}
+
+{% endblock %}

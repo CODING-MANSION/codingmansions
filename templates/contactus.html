@@ -1,0 +1,84 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}Contact us{% endblock %}
+
+{% block head %}
+                <link type="text/css" href="{% static 'css/portfolio.css' %}" rel="stylesheet" />
+                <link type="text/css" href="{% static 'css/social.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block css %}
+#Contact {
+
+    margin-top: 20px;
+    position:relative;
+    background-color: rgb(223, 183, 183);
+
+}
+
+img { margin-top:20px;}
+{% endblock %}
+
+{% block body %}
+
+        <div id="s_icons" style="background-image: url({% static 'assets/img/Contact-Us.jpg' %});">
+        <li><h1 style="color:white; margin-left:15em; font-family:cursive">CONTACT US</h1></li>
+        <ul id="social">
+        <li><a href="https://www.facebook.com/Techbeastofficial-106253671640844/?ref=pages_you_manage"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCKaeXCzdET582MAki8A7bOg?"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+        <li><a href="mailto:codingmansions@email.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/kshitiz-verma-a080a9187/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+
+        <li><a href="https://www.instagram.com/codingmansion/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+       </div>
+
+<section id="Contact">
+       <!-- Contact-->
+       <section class="page-section" id="contact">
+           <div class="container px-4 px-lg-5">
+               <div class="row gx-4 gx-lg-5 justify-content-center">
+                   <div class="col-lg-8 col-xl-6 text-center">
+                       <h2 class="mt-0">Let's Get In Touch!</h2>
+                       <hr class="divider" />
+                       <p class="text-muted mb-5">Feel free to get in touch.</p>
+                   </div>
+               </div>
+               <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                   <div class="col-lg-6">
+                   <form action='portfolio/contacts' method='POST'>{% csrf_token %}
+
+                           <div class="form-floating mb-3">
+                               <input
+                                       class="form-control" name="name" type="text" placeholder="Enter your name..." />
+                               <label for="inputName">Full name</label>
+                           </div>
+                           <div class="form-floating mb-3">
+                               <input class="form-control" name="email" type="email" placeholder="name@example.com" />
+                               <label for="inputEmail">Email address</label>
+                           </div>
+                           <div class="form-floating mb-3">
+                               <input class="form-control" name="phone" type="tel" placeholder="(123) 456-7890" />
+                               <label for="inputPhone">Phone number</label>
+                           </div>
+                           <div class="form-floating mb-3">
+                               <textarea class="form-control" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem"></textarea>
+                               <label for="inputMessage">Message</label>
+                           </div>
+                           <div class="d-grid"><button class="btn btn-primary btn-xl" type="submit">Submit</button></div>
+                       </form>
+                   </div>
+               </div>
+               <div class="row gx-4 gx-lg-5 justify-content-center">
+                   <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                       <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                       <div></div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+</section>
+
+{% endblock %}

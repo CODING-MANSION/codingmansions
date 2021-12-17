@@ -1,0 +1,95 @@
+{% extends 'basic.html' %}
+
+{% load static %}
+{% block css %}
+ #back {
+            margin-left:20px;
+            margin-top:30px;
+            font-family:font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+            }
+{% endblock %}
+{% block title %}Playlist{% endblock %}
+
+{% block body %}
+<a href="/" class="btn btn-success btn-xl" id="back">Back</a>
+<div class="background2">
+    <div class="row">
+       <div class="col-lg-11 mx-auto">
+         <!-- FIRST EXAMPLE ===================================-->
+         <div class="row py-5">
+           <div class="col-lg-4">
+             <figure class="rounded p-3 bg-white shadow-sm">
+               <img src="{% static 'assets\img\playlist\pattern.png' %}" alt="" class="w-100 card-img-top">
+               <figcaption class="p-4 card-img-bottom">
+                 <h2 class="h5 font-weight-bold mb-2 font-italic">Patterns using python</h2>
+                 <p class="mb-0 text-small text-muted font-italic">Get your programming career started with these free video courses. Source code is available with all the videos for amazing learning experience
+                </p><br/>
+                 <form action="video" method="POST">{% csrf_token %}
+                    <input type="hidden" name="btn" value="patterns" />
+                    <button type="submit" class="btn btn-primary btn-xl" id="btncont">Watch</button>
+                </form>
+
+               </figcaption>
+             </figure>
+           </div>
+           <div class="col-lg-4">
+             <figure class="rounded p-3 bg-white shadow-sm">
+               <img src="{% static 'assets\img\playlist\tech-news.jpg' %}" alt="" class="w-100 card-img-top">
+               <figcaption class="p-4 card-img-bottom">
+                 <h2 class="h5 font-weight-bold mb-2 font-italic">Tech News</h2>
+                 <p class="mb-0 text-small text-muted font-italic">Some of the latest coding information compiled in the form of coding articles. Keep your programming knowledge up to date with these articles.</p>
+                 <br/>
+                 <form action="video" method="POST">{% csrf_token %}
+                    <input type="hidden" name="btn" value="Tech News" />
+                    <button type="submit" class="btn btn-primary btn-xl" id="btncont">Watch</button>
+                </form>
+                </figcaption>
+             </figure>
+           </div>
+           <div class="col-lg-4">
+             <figure class="rounded p-3 bg-white shadow-sm">
+               <img src="{% static 'assets\img\playlist\programming.jpg' %}" alt="" class="w-100 card-img-top">
+               <figcaption class="p-4 card-img-bottom">
+                 <h2 class="h5 font-weight-bold mb-2 font-italic">Programming Problems</h2>
+                 <p class="mb-0 text-small text-muted font-italic">Learn programming from these free tutorials. Examples are available with these tutorials. You can contact me for any doubt and I will get back to you!
+                </p><br/>
+                <form action="video" method="POST">{% csrf_token %}
+                    <input type="hidden" name="btn" value="programming problems" />
+                    <button type="submit" class="btn btn-primary btn-xl" id="btncont">Watch</button>
+                </form>
+               </figcaption>
+             </figure>
+           </div>
+           <div class="col-lg-4">
+            <figure class="rounded p-3 bg-white shadow-sm">
+              <img src="{% static 'assets\img\playlist\Beginner-to-Expert-Easy-Python-Tutorials.jpg' %}" alt="" class="w-100 card-img-top">
+              <figcaption class="p-4 card-img-bottom">
+                <h2 class="h5 font-weight-bold mb-2 font-italic">PYthon Tutorials for biginners</h2>
+                <p class="mb-0 text-small text-muted font-italic">Learn programming from these free tutorials. Examples are available with these tutorials. You can contact me for any doubt and I will get back to you!
+               </p><br/>
+               <form action="video" method="POST">{% csrf_token %}
+                   <input type="hidden" name="btn" value="python tutorials" />
+                   <button type="submit" class="btn btn-primary btn-xl" id="btncont">Watch</button>
+               </form>
+              </figcaption>
+            </figure>
+          </div>
+           <div class="col-lg-4">
+             <figure class="rounded p-3 bg-white shadow-sm">
+               <img src="{% static 'assets\img\laptop.jpg' %}" alt="" class="w-100 card-img-top">
+               <figcaption class="p-4 card-img-bottom">
+                 <h2 class="h5 font-weight-bold mb-2 font-italic">other</h2>
+                 <p class="mb-0 text-small text-muted font-italic">Get your programming career started with these free video courses. Source code is available with all the videos for amazing learning experience
+                </p><br/>
+                <form action="video" method="POST">{% csrf_token %}
+                    <input type="hidden" name="btn" value="others" />
+                    <button type="submit" class="btn btn-primary btn-xl" id="btncont">Watch</button>
+                </form>
+               </figcaption>
+             </figure>
+           </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{ % block title % }HOME{ % endblock % }
+ {% block head %}<link href="{% static 'css/home.css' %}" type="text/css" rel="stylesheet" />{% endblock %}
+ 
+{% block body%}
+     <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <center><strong style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Welcome to Coding Mansion !</strong></center>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+    <div class="background1">
+        <div class="intro">
+            <img width="900" height="350" src="{% static 'assets/videos/intro.gif' %}"/>
+        </div>
+        <h1>
+            <a  href="" class="typewrite" data-period="2000" data-type='["Learn Python", "Web Development", "Data Science", "Machine Learning","and other awesome programming concepts with us." ]'>
+            <span style="text-align: center;" class="wrap"></span>
+            </a>
+        </h1>
+    </div>
+    <br/>
+    <div class="background3">
+    <div>
+      <img height="230" src="{% static 'assets/bg-3.png' %}" alt="bg-3 image">
+    </div>
+      <p class="text1">Master the language of the web,learn basic fundamentals
+        and build the skills you need to analyse data. Programming is an intriguing sector as it gives us the superpower
+        to regulate computer programs on the go. So to ensure that you remain up to date on standards and protocols, an deven more in the fiels
+        of coding stay connected and also learn tricks and shortcuts you would never have dreamed of.
+      </p>
+      <div class="introbtns">
+          <a href="blogs/" class="btn btn-danger btn-xl" id="btnblog">Blog</a>
+          <a  href="tutorials/index" class="btn btn-success btn-xl" id="btntut">Video Tutorials</a>
+          <a href="contactus" class="btn btn-primary btn-xl" id="btncont">Contact Us</a>
+      </div>
+    </div>
+  
+    <div class="background2">
+      <div class="row">
+         <div class="col-lg-11 mx-auto">
+           <!-- FIRST EXAMPLE ===================================-->
+           <div class="row py-5">
+             <div class="col-lg-4">
+               <figure class="rounded p-3 bg-white shadow-sm">
+                 <img src="{% static 'assets\img\laptop.jpg' %}" alt="" class="w-100 card-img-top">
+                 <figcaption class="p-4 card-img-bottom">
+                   <h2 class="h5 font-weight-bold mb-2 font-italic">Free Video Tutorials</h2>
+                   <p class="mb-0 text-small text-muted font-italic">Get your programming career started with these free video courses. Source code is available with all the videos for amazing learning experience
+                  </p><br/>
+                  <a href="tutorials/index" class="btn btn-primary btn-xl" id="btntut">Video Tutorials</a>
+
+                 </figcaption>
+               </figure>
+             </div>
+             <div class="col-lg-4">
+               <figure class="rounded p-3 bg-white shadow-sm">
+                 <img src="{% static 'assets\img\coding.jpg' %}" alt="" class="w-100 card-img-top">
+                 <figcaption class="p-4 card-img-bottom">
+                   <h2 class="h5 font-weight-bold mb-2 font-italic">Coding Articles</h2>
+                   <p class="mb-0 text-small text-muted font-italic">Some of the latest coding information compiled in the form of coding articles. Keep your programming knowledge up to date with these articles.</p>
+                   <br/><a href="blogs/" class="btn btn-primary btn-xl btn-xl" id="btnblog">Blog</a>
+                  </figcaption>
+               </figure>
+             </div>
+             <div class="col-lg-4">
+               <figure class="rounded p-3 bg-white shadow-sm">
+                 <img src="{% static 'assets\img\contact.jpg' %}" alt="" class="w-100 card-img-top">
+                 <figcaption class="p-4 card-img-bottom">
+                   <h2 class="h5 font-weight-bold mb-2 font-italic">Contact Us</h2>
+                   <p class="mb-0 text-small text-muted font-italic">Learn programming from these free tutorials. Examples are available with these tutorials. You can contact me for any doubt and I will get back to you!
+                  </p><br/>
+                  <a href="contactus" class="btn btn-primary btn-xl" id="btncont">Contact Us</a>
+                 </figcaption>
+               </figure>
+             </div>
+           </div>
+
+    </div>
+<script src="{% static 'js\home.js' %}"></script>
+ {% endblock %}

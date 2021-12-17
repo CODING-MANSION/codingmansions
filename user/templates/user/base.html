@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    /* Style the dropdown button */
+
+    .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* On mouse-over */
+   .dropdown-btn:hover {
+      color: black;
+      background-color: green;
+    }
+
+    /* Add an active class to the active dropdown button */
+    .active {
+      background-color:darkslategray ;
+      color: white;
+    }
+
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+      display: none;
+      background-color: white;
+      padding-left: 8px;
+    }
+
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+    }
+    .brandlogo {
+      border-radius: 50%;
+      margin-right: 30px;
+
+    }
+</style>
+
+ <!-- message here -->
+
+  {% if messages %}
+  {% for message in messages %}
+
+  <script>
+    alert("{{ message }}");
+  </script>
+
+  {% endfor %}
+  {% endif %}
+
+  <!--_______________________________________________-->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <img height="50px" width="50px" class="brandlogo" src="{% static 'assets/img/portfolio/my image.jpg' %}">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">H&#128578;me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+{% block body %}{% endblock %}
+</body>
